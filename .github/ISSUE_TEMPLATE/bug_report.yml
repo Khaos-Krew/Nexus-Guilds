@@ -1,0 +1,45 @@
+name: Bug report
+description: Something in Nexus Guilds isn't working right
+labels: [bug, needs-triage]
+body:
+  - type: input
+    id: mod_version
+    attributes:
+      label: Nexus Guilds version
+      placeholder: e.g. 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: modpack
+    attributes:
+      label: Modpack and version
+      placeholder: e.g. All the Mods 10 v4.2, or "none"
+  - type: dropdown
+    id: side
+    attributes:
+      label: Where does it happen?
+      options: [Singleplayer, Multiplayer server, Both, Not sure]
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [Colonists or AI, Builders or schematics, Player-built rooms, Guild halls, Guild contracts, Renown or growth, Colony tablet, Storage or machines, Needs or happiness, Styles or skins, Performance or lag, Khaos Nexus tie-ins, Mod compatibility, Other]
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+  - type: input
+    id: logs
+    attributes:
+      label: Log link
+      description: Upload latest.log to https://mclo.gs and paste the link

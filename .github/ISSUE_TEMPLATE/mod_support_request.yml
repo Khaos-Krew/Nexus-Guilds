@@ -1,0 +1,56 @@
+name: Request mod support
+description: Suggest a mod you'd like Nexus Guilds to work with or integrate
+title: "[Mod support] "
+labels: [mod-support-request]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Want Nexus Guilds to work with another mod? Tell us about it here. Please search existing requests first, and give a 👍 to one that's already open instead of making a duplicate.
+  - type: input
+    id: mod_name
+    attributes:
+      label: Mod name
+      placeholder: e.g. Occultism
+    validations:
+      required: true
+  - type: input
+    id: mod_link
+    attributes:
+      label: CurseForge link
+      placeholder: https://www.curseforge.com/minecraft/mc-mods/...
+    validations:
+      required: true
+  - type: input
+    id: mc_version
+    attributes:
+      label: Minecraft / loader version it supports
+      placeholder: e.g. 1.21.1 NeoForge
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of support?
+      multiple: true
+      options:
+        - Make them work together without problems
+        - Colonists operate its machines
+        - Colonists use its storage or logistics
+        - Its crops, animals or resources as colony jobs
+        - A new guild or job for it
+        - Building styles or schematics
+        - Quest chapter (FTB Quests)
+        - Other (explain below)
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: How should they work together?
+      description: Give any specific ideas you have, like which guild or job it fits, and so on.
+    validations:
+      required: true
+  - type: input
+    id: modpack
+    attributes:
+      label: Modpack you play it in (optional)
+      placeholder: e.g. All the Mods 10
